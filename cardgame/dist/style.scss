@@ -53,4 +53,10 @@ body {
             }
         }
     }
+
+    > footer {
+        height: 12rem;
+        @include center;
+        flex-direction: column;
+    }
 }
