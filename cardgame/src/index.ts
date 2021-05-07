@@ -81,3 +81,19 @@ function updateUI(): void {
 }
 
 updateUI()
+
+let btn: HTMLElement = document.querySelector('button');
+
+btn.addEventListener('click', () => {
+
+    if(deck.length){
+        // new card
+        updateUI()
+
+        // update counter
+        document.querySelector('.counter').innerHTML = `${deck.length} / 52`;
+    
+    } else {
+        alert('Kortleken är slut!')
+    }
+})

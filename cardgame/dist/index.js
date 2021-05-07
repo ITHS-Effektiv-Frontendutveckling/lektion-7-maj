@@ -57,3 +57,15 @@ function updateUI() {
     target.insertAdjacentHTML('beforeend', el);
 }
 updateUI();
+let btn = document.querySelector('button');
+btn.addEventListener('click', () => {
+    if (deck.length) {
+        // new card
+        updateUI();
+        // update counter
+        document.querySelector('.counter').innerHTML = `${deck.length} / 52`;
+    }
+    else {
+        alert('Kortleken är slut!');
+    }
+});
