@@ -1,7 +1,7 @@
 
 /* TS INTERFACES */
 interface Card {
-    suite: string,
+    suit: string,
     rank: number,
     value: string,
     color: string
@@ -31,7 +31,7 @@ function generateDeck(): Card[] {
             let color: string = (suit === '&hearts;' || suit === '&diams;') ? 'red' : 'black';
 
             let card: Card = {
-                suite: suit,
+                suit: suit,
                 rank: i,
                 value: val,
                 color: color 
@@ -42,7 +42,7 @@ function generateDeck(): Card[] {
         }
     }
 
-    return deck
+    return deck;
 
 }
 
@@ -59,15 +59,15 @@ function updateUI(): void {
     const el:string = `
     <article class="${card.color}">
         <header>
-            <p>${card.suite}</p>
+            <p class="suit">${card.suit}</p>
             <p>${card.value}</p>
         </header>
-        <h1>${card.suite}</h1>
+        <h1 class="suit">${card.suit}</h1>
         <footer>
-            <p>${card.suite}</p>
+            <p class="suit">${card.suit}</p>
             <p>${card.value}</p>
         </footer>
-    <article>`;
+    </article>`;
 
     // leta reda på main
     let target: HTMLElement = document.querySelector('main');

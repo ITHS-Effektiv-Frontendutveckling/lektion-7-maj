@@ -21,7 +21,7 @@ function generateDeck() {
             }
             let color = (suit === '&hearts;' || suit === '&diams;') ? 'red' : 'black';
             let card = {
-                suite: suit,
+                suit: suit,
                 rank: i,
                 value: val,
                 color: color
@@ -40,15 +40,15 @@ function updateUI() {
     const el = `
     <article class="${card.color}">
         <header>
-            <p>${card.suite}</p>
+            <p class="suit">${card.suit}</p>
             <p>${card.value}</p>
         </header>
-        <h1>${card.suite}</h1>
+        <h1 class="suit">${card.suit}</h1>
         <footer>
-            <p>${card.suite}</p>
+            <p class="suit">${card.suit}</p>
             <p>${card.value}</p>
         </footer>
-    <article>`;
+    </article>`;
     // leta reda på main
     let target = document.querySelector('main');
     // töm main
